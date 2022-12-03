@@ -8,9 +8,15 @@ const CreatePage = () => {
     const [intro, setIntro] = useState("");
     const [completed, setCompleted] = useState(false);
     const [review, setReview] = useState("");
+    const[warningMessage,setWarningMessage]=useState();
+    const [warningStyle,setWarningStyle]=useState();
     const warningRef=useRef(null);
   
     const store = useAppContext();
+
+    
+
+
   
     const inputStyles = {
       formContainer: {
@@ -72,16 +78,28 @@ const CreatePage = () => {
       };
       if ( checkBookDetails(newBook)){
         store.createItem(newBook)
-        warningRef.current.style.display="none";
+        
         document.getElementById("form").reset();
         setTitle("");
         setAuthor("");
         setIntro("");
         setReview("");
         setCover("");
+        warningRef.current.style.display="block";
+        setWarningStyle("success");
+        setWarningMessage("The book has been created successfully");
+        setTimeout(()=>{
+          warningRef.current.style.display="none";
+        },2000);
        
       }else{
+        setWarningMessage("Please make sure you filled the requierd info")
+        setWarningStyle("warning");
         warningRef.current.style.display="block";
+        setTimeout(()=>{
+          warningRef.current.style.display="none";
+        },2000);
+
       }
        
       
@@ -107,7 +125,7 @@ const CreatePage = () => {
     return (
       
         <form id="form"  onSubmit={handleSubmit} style={inputStyles.formContainer}>
-          <div className="warning" ref={warningRef} >Please make sure you filled the requierd info</div>
+          <div className={warningStyle} ref={warningRef} >{warningMessage}</div>
           <div style={inputStyles.container}>
             <div style={inputStyles.title}>Title<span style={inputStyles.spanImportant}>*</span></div>
             <input id="titleInput"
