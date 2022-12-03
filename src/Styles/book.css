@@ -1,0 +1,61 @@
+.bookContainer{
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: #d0d0d0;
+    color: #202124;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.bookContainer img{
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.bookTitle{
+    font-weight: 700;
+    font-size: 2rem;
+
+}
+
+.bookAuthor{
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.details{
+        position: relative;
+        bottom: 25px;
+        width: 120px;
+        border-style: none;
+        padding: 10px;
+        background: #202124;
+        color: white;
+        border-radius: 10px;
+        font-weight: 400;
+
+}
+
+.details:hover{
+    background: white;
+    color: #202124;
+    font-weight: bold;
+    animation: pop 0.5s linear ;
+    cursor: pointer;
+    
+}
+
+@keyframes pop {
+    0%{
+        transform: scale(100%);
+    }
+    50%{
+        transform: scale(120%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}

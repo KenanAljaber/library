@@ -1,13 +1,15 @@
+import Book from "../Components/Book";
 import { useAppContext } from "../Store/store";
+import "../Styles/homePage.css"
 const HomePage = () => {
     const store=useAppContext();
 
     return ( 
-        <div>
+        <div className="grid">
             {
                 store.items.map((it)=>{
                     return(
-                        <div>{it.title}</div>
+                        <Book key={it.id} title={it.title} cover={it.cover} author={it.author} id={it.id} />
                     );
                 })
             }

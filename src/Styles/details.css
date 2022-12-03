@@ -1,0 +1,41 @@
+.detailContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsImg{
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+}
+
+.detailsInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detailsTitle{
+    font-weight: 700;
+    font-size: 3rem;
+}
+.detailsAuthor{
+
+
+}
+.detailsReview{
+    margin-bottom: 20px;
+    background: #EFEFEF;
+    color: #252526;
+    padding: 15px;
+    border-radius: 20px;
+    font-style: italic;
+    max-width: 400px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+ .detailsSpan{
+    margin-top: 1000px;
+}

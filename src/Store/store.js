@@ -18,11 +18,12 @@ export default function Store({ children }) {
     temp.unshift(item);
 
     setItems([...temp]);
+    console.log("here");
   }
 
   function getItem(id) {
     const item = items.find((item) => item.id === id);
-
+    
     return item;
   }
 

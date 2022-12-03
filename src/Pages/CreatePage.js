@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useAppContext } from "../Store/store";
+import "../Styles/createPage.css"
 const CreatePage = () => {
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
@@ -7,6 +8,7 @@ const CreatePage = () => {
     const [intro, setIntro] = useState("");
     const [completed, setCompleted] = useState(false);
     const [review, setReview] = useState("");
+    const warningRef=useRef(null);
   
     const store = useAppContext();
   
@@ -29,6 +31,10 @@ const CreatePage = () => {
         padding: "10px",
         borderRadius: "5px",
         fontSize: "16px",
+      },
+      spanImportant:{
+        color: "red",
+        fontSize: "1.2rem",
       },
     };
   
@@ -54,7 +60,7 @@ const CreatePage = () => {
   
     function handleSubmit(e) {
       e.preventDefault();
-  
+      
       const newBook = {
         id: crypto.randomUUID(),
         title,
@@ -64,8 +70,27 @@ const CreatePage = () => {
         completed,
         review,
       };
-  
-      store.createItem(newBook);
+      if ( checkBookDetails(newBook)){
+        store.createItem(newBook)
+        warningRef.current.style.display="none";
+        document.getElementById("form").reset();
+        setTitle("");
+        setAuthor("");
+        setIntro("");
+        setReview("");
+        setCover("");
+       
+      }else{
+        warningRef.current.style.display="block";
+      }
+       
+      
+     
+
+    }
+
+    function checkBookDetails(book){
+     return  !book.title || !book.author || !book.cover ? false: true;
     }
   
     function handleOnChangeFile(e) {
@@ -81,10 +106,11 @@ const CreatePage = () => {
   
     return (
       
-        <form onSubmit={handleSubmit} style={inputStyles.formContainer}>
+        <form id="form"  onSubmit={handleSubmit} style={inputStyles.formContainer}>
+          <div className="warning" ref={warningRef} >Please make sure you filled the requierd info</div>
           <div style={inputStyles.container}>
-            <div style={inputStyles.title}>Title</div>
-            <input
+            <div style={inputStyles.title}>Title<span style={inputStyles.spanImportant}>*</span></div>
+            <input id="titleInput"
               style={inputStyles.input}
               type="text"
               name="title"
@@ -94,7 +120,7 @@ const CreatePage = () => {
           </div>
   
           <div style={inputStyles.container}>
-            <div style={inputStyles.title}>Author</div>
+            <div style={inputStyles.title}>Author<span style={inputStyles.spanImportant}>*</span></div>
             <input
               style={inputStyles.input}
               type="text"
@@ -105,7 +131,7 @@ const CreatePage = () => {
           </div>
   
           <div style={inputStyles.container}>
-            <div style={inputStyles.title}>Cover</div>
+            <div style={inputStyles.title}>Cover<span style={inputStyles.spanImportant}>*</span></div>
             <input type="file" name="cover" onChange={handleOnChangeFile} />
             <div>{!!cover ? <img src={cover} width="200" /> : ""}</div>
           </div>
