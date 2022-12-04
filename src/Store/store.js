@@ -41,7 +41,7 @@ export default function Store({ children }) {
   function getItem(id) {
     const localItem=items.find((item) => item.id === id);
    const googleItem=foundItems.find((item) => item.id === id);
-    const item =  googleItem;
+    const item =  localItem? localItem : googleItem;
     
     
     return item;

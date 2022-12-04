@@ -6,6 +6,7 @@
     background: #202124;
     color: white;
     justify-content: center;
+    width: 100%;
 }
 .navbar-container a{
     margin: 10px;
@@ -17,4 +18,43 @@
 
 .navbar-container a:hover{
     color: yellowgreen;
+}
+.side-navBar{
+   
+        background: #D0D0D0;
+        position: fixed;
+        padding: 0px;
+        padding-top: 50px;
+        height: 100%;
+        color: #252526;
+        left: 0;
+        top: 0;
+        width: 0;
+        z-index: 100;
+        text-align: center;
+        transition: 0.5s;
+        flex-direction: column;
+
+}
+.closedSideNavItems{
+    display: none;
+}
+.opensideNavItems{
+    display: block;
+}
+.navImage{
+    display: none;
+    position: fixed;
+    z-index: 500;
+}
+.side-navBar a{
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #252526;
+
+}
+
+.side-navBar a:hover{
+    color: rgb(74, 110, 0);
 }
