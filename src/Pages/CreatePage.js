@@ -20,8 +20,8 @@ const CreatePage = () => {
   
     const inputStyles = {
       formContainer: {
-        width: "400px",
-        margin: "0 auto",
+        maxWidth: "400px",
+        margin: "100px auto",
       },
       container: {
         display: "flex",
