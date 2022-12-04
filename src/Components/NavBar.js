@@ -53,7 +53,7 @@ const NavBar = () => {
 
             let menuWidth = window.innerWidth / 2;
             navImageRef.current.style.top = 10 + "px";
-            navImageRef.current.style.left = (menuWidth - 70) + "px";
+            navImageRef.current.style.left = (menuWidth - 50) + "px";
             navImageRef.current.style.transition = "1s";
             navbarContainer.current.style.display = "flex";
 

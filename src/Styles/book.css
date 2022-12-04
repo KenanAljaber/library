@@ -3,17 +3,17 @@
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    background: #d0d0d0;
-    color: #202124;
+    background: #ECCD30;
+    color: #163558;
     padding: 10px;
     border-radius: 20px;
-    max-width: 200px;
-    max-height: 450px;
+    height: 275px;
+    width: 200px;
 }
 
 .bookContainer img{
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 175px;
     border-radius: 10px;
     box-shadow: 3px 3px 8px 4px #202124;
 }
@@ -35,7 +35,7 @@
         width: 120px;
         border-style: none;
         padding: 10px;
-        background: #202124;
+        background: #629ADB;
         color: white;
         border-radius: 10px;
         font-weight: 400;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useAppContext } from "../Store/store";
 import "../Styles/details.css"
 
@@ -11,10 +11,21 @@ const BookDetail = ({ id }) => {
         setBook(store.getItem(params.bookId));
         
     }, [book]);
+    const style={
+        btn:{
+            marginTop:"100px",
+        width:"100px",
+        padding:"5px",
+        borderRadius:"20px",
+        borderStyle:"none",
+        backgroundColor:"#ECCD30"
+        }
+    };
+
     return (
         
         <div className="detailContainer">
-           
+           <button style={style.btn}><Link style={{textDecoration:"none",color:"black"}} to="/">Back</Link></button>
             <img src={book?.cover}  className="detailsImg"/>
             { book!=null ?
             <div className="detailsInfo">

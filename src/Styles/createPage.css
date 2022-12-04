@@ -4,6 +4,7 @@
     border-radius: 10px;
     color: red;
     display: none;
+    margin-top: 10px;
 }
 
 .success{
@@ -12,4 +13,5 @@
     border-radius: 10px;
     color: black;
     display: none;
+    margin-top: 10px;
 }

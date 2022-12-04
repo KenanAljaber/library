@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { useAppContext } from "../Store/store";
 import "../Styles/createPage.css"
 const CreatePage = () => {
@@ -19,9 +20,17 @@ const CreatePage = () => {
 
   
     const inputStyles = {
+      btn:{
+        marginTop:"100px",
+        width:"100px",
+        padding:"5px",
+        borderRadius:"20px",
+        borderStyle:"none",
+        backgroundColor:"#ECCD30"
+      },
       formContainer: {
         maxWidth: "400px",
-        margin: "100px auto",
+        margin: "20px auto",
       },
       container: {
         display: "flex",
@@ -123,8 +132,10 @@ const CreatePage = () => {
     }
   
     return (
-      
+        <div>
+         
         <form id="form"  onSubmit={handleSubmit} style={inputStyles.formContainer}>
+        <button style={inputStyles.btn}><Link style={{textDecoration:"none",color:"black"}} to="/">Back</Link></button>
           <div className={warningStyle} ref={warningRef} >{warningMessage}</div>
           <div style={inputStyles.container}>
             <div style={inputStyles.title}>Title<span style={inputStyles.spanImportant}>*</span></div>
@@ -202,7 +213,7 @@ const CreatePage = () => {
             }}
           />
         </form>
-     
+        </div>
 
      );
 }
