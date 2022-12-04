@@ -16,7 +16,7 @@ export const useBook = (keyWord) => {
         setSearchText(txt);
     }
     async function loadBooks(keyWord){
-        keyWord= !keyWord? "react" : keyWord;
+        keyWord= !keyWord? "syria" : keyWord;
         console.log("here",keyWord);
         const resp= await fetch(`${process.env.REACT_APP_BOOK_URL}q=${keyWord}&key=${process.env.REACT_APP_BOOK_KEY}`);
         setTimeout(async ()=>{
