@@ -1,0 +1,15 @@
+.warning{
+    background: #ffe0e0;
+    padding: 10px;
+    border-radius: 10px;
+    color: red;
+    display: none;
+}
+
+.success{
+    background: #34e013;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    display: none;
+}

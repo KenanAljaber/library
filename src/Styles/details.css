@@ -1,0 +1,55 @@
+.detailContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailsImg{
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    background-color: #EFEFEF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.detailsInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detailsTitle{
+    font-weight: 700;
+    font-size: 3rem;
+}
+.detailsAuthor{
+
+
+}
+.detailsReview{
+    margin-bottom: 20px;
+    background: #EFEFEF;
+    color: #252526;
+    padding: 15px;
+    border-radius: 20px;
+    font-style: italic;
+    max-width: 400px;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+}
+ .detailsSpan{
+    margin-top: 1000px;
+}
+
+@media (max-width: 850px) {
+    .detailContainer{
+        margin-top: 75px;
+       flex-direction: column;
+    }
+    .detailsImg{
+        width: 300px;
+        height: 400px;
+    }
+}
