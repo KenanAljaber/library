@@ -3,4 +3,5 @@ body{
     font-family: Lato;
     background: #252526;
     color: white;
+    overflow-x: hidden;
 }
