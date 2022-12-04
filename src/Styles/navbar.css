@@ -1,12 +1,15 @@
 .navbar-container{
-    padding: 10px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: row;
-    background: #202124;
-    color: white;
-    justify-content: center;
-    width: 100%;
+        /* padding: 10px; */
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        background: #629ADB;
+        color: white;
+        justify-content: center;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
 }
 .navbar-container a{
     margin: 10px;
@@ -21,7 +24,7 @@
 }
 .side-navBar{
    
-        background: #D0D0D0;
+    background: #629ADB;
         position: fixed;
         padding: 0px;
         padding-top: 50px;
@@ -51,7 +54,7 @@
     margin: 10px;
     font-size: 20px;
     text-decoration: none;
-    color: #252526;
+    color:  #ffe668;
 
 }
 
