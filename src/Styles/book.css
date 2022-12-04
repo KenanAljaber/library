@@ -7,17 +7,20 @@
     color: #202124;
     padding: 10px;
     border-radius: 20px;
+    max-width: 200px;
+    max-height: 450px;
 }
 
 .bookContainer img{
     width: 200px;
     height: 300px;
     border-radius: 10px;
+    box-shadow: 3px 3px 8px 4px #202124;
 }
 
 .bookTitle{
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.5rem;
 
 }
 
