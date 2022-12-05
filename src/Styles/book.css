@@ -7,8 +7,9 @@
     color: #163558;
     padding: 10px;
     border-radius: 20px;
-    height: 275px;
+    height: 325px;
     width: 200px;
+    place-content: center;
 }
 
 .bookContainer img{

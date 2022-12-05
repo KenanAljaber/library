@@ -13,13 +13,13 @@
     color: #a19662;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .grid{
         grid-template-columns: repeat(1, 1fr);
         place-items: center;
     }
 }
-@media (min-width: 401px) and (max-width: 750px) {
+@media (min-width: 501px) and (max-width: 750px) {
     .grid{
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
