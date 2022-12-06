@@ -1,4 +1,4 @@
-<img src="./src/assets/krugerLogo.png" height="100px">
+<img src="./src/Assets/krugerLogo.png" height="100px">
 
 # Kruger Star Library App 
 
@@ -6,7 +6,7 @@
 
 # Preview of the website
 
-<img src="./src/assets/screenShot.PNG"/>
+<img src="./src/Assets/screenShot.PNG"/>
 
 >Library app does allow user to add books to the site with a breif review, and it also uses google books api to fetch books from goole books whenever the user search for some book name or author name.
 
