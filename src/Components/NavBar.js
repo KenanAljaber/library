@@ -88,11 +88,13 @@ const NavBar = () => {
         <div>
             <img className="navImage" src={navImage} ref={navImageRef} width="25px" onClick={openCloseNav} />
             <div ref={navbarContainer} className={navBarStyle}>
+               
                 <p className={navItemStyle}><Link to="/">Home</Link></p>
                 <p className={navItemStyle}><Link to="/create-book">Add Book</Link></p>
-
-
+               
+              
             </div>
+            
         </div>
     );
 }
