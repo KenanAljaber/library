@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 body{
     font-family: Lato;
-    background: #0A3072;
-    color: #9AF4BE;
+    background: white;
+    color: black;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
 }

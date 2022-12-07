@@ -5,9 +5,9 @@
     align-items: center;
     background: #ECCD30;
     color: #163558;
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
-    height: 325px;
+    height: 300px;
     width: 200px;
     place-content: center;
 }

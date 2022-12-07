@@ -32,7 +32,12 @@ const HomePage = () => {
     }
     return ( 
         <div>
-            <Search findItems={findItems} cancelSearch={cancelSearch}/>
+            <div className="banner">
+                <h1 style={{fontSize:"clamp(2.8rem,2.5rem,3rem)"}}>Library App React</h1>
+                <Search findItems={findItems} cancelSearch={cancelSearch}/>
+            </div>
+        <div className="content">
+            
             <h2>Your books</h2>
             { books.length>0?
         <div className="grid">
@@ -58,6 +63,7 @@ const HomePage = () => {
     </div>
         : 
         <div>Did not find any books on google</div>}
+        </div>
         </div>
 
      );

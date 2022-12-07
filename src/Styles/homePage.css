@@ -1,16 +1,28 @@
 .grid{
     display: grid;
     gap: 1rem;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    margin: 50px;
     place-content: start;
     grid-template-columns: repeat(5, 1fr);
-    margin-right: 20px;
+    /* margin-right: 20px; */
     margin-bottom: 100px;
+}
+.banner{
+    text-align: center;
+    background: #ECCD30;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content{
+    padding: 10px 100px 100px 100px;
 }
 
 .noResult{
     text-align: center;
-    color: #a19662;
+    color: #a39d9d;
 }
 
 @media (max-width: 500px) {
@@ -23,31 +35,27 @@
     .grid{
         grid-template-columns: repeat(2, 1fr);
         place-items: center;
-        margin-left: 0;
-        margin-right: 0;
+ 
     }
 }
 @media (min-width: 751px) and (max-width: 980px) {
     .grid{
         grid-template-columns: repeat(3, 1fr);
         place-items: center;
-        margin-left: 0;
-        margin-right: 0;
+
     }
 }
 @media (min-width: 980px) and (max-width: 1215px) {
     .grid{
         grid-template-columns: repeat(4, 1fr);
         place-items: center;
-        margin-left: 0;
-        margin-right: 0;
+
     }
 }
 @media (min-width: 1216px){
     .grid{
         grid-template-columns: repeat(5, 1fr);
         place-items: center;
-        margin-left: 0;
-        margin-right: 0;
+
     }
 }
